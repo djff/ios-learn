@@ -1,0 +1,20 @@
+name: COS Deployment
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        type: choice
+        description: "Environment: " 
+        default: dev
+        required: true
+        options:
+          - dev
+          - stage
+          - prod
+        deploy_type:
+          type: string
+          description: 'Deployment Type'
+          required: true
+          default: 'cos'
+          options:
+            - cos
